@@ -2,7 +2,7 @@
 
 **Carry the brief, constraints, and evidence from one skill to the next.** Workflow Coordinator helps Codex and Claude Code handle tasks that span project knowledge and delivery. It passes the relevant context to the right specialist, collects the checks that actually ran, and can return useful findings to your project notes.
 
-For example, Atlas’ Notes can find the size constraint for a Blender asset. Blender Production can build and verify the export. The coordinator keeps the size requirement and verification result tied to the same task.
+For example, [Atlas’ Notes](https://github.com/Noraara/Atlas-Notes) can find the size constraint for a Blender asset. [Blender Production](https://github.com/Noraara/Blender-Production) can build and verify the export. The coordinator keeps the size requirement and verification result tied to the same task.
 
 ## Quick start
 
