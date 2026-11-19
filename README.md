@@ -31,6 +31,8 @@ Open a checkout of this repository and try the following in a fresh Codex sessio
 
 In Claude Code, start the request with `/workflow-coordinator`. Expect the task scope, the measurements from the brief, and the checks the delivery phase would need to run. The [worked cable guide example](examples/cable-guide/README.md) includes context and result packets, a Blender source, a GLB, and observed round-trip checks.
 
+Try the [ordinary-files handoff](examples/cable-guide/standalone-handoff.md) for a route that uses the project brief directly and records partial progress when Blender is unavailable.
+
 ## How it works
 
 | Task | What the coordinator does |

@@ -1,0 +1,32 @@
+{
+  "schema": "atlas-workflow/v1",
+  "project_id": "desk-setup-demo",
+  "task_id": "cable-guide-delivery",
+  "scope": "Create and verify the disposable cable guide files and record a short project note.",
+  "kind": "result",
+  "changes": [],
+  "decisions": [
+    "Deliver a Blender source and export only the guide to GLB.",
+    "Use a clean scene for the round-trip check."
+  ],
+  "checks": [
+    {
+      "name": "Brief constraints",
+      "status": "pass",
+      "evidence": "brief.md",
+      "observed": "The brief specifies 50 × 24 × 15 mm and an 8 mm opening."
+    },
+    {
+      "name": "Native delivery and GLB reimport",
+      "status": "unverified",
+      "observed": "The Blender bridge was unavailable in this scenario."
+    }
+  ],
+  "findings": [
+    "The context packet is ready for Blender production."
+  ],
+  "unresolved": [
+    "Create the editable guide and verify the GLB in a clean scene."
+  ],
+  "next_action": "Confirm the Blender bridge and document, then resume the same delivery task with the existing context packet."
+}
