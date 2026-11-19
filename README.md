@@ -43,6 +43,18 @@ Try the [ordinary-files handoff](examples/cable-guide/standalone-handoff.md) for
 
 The [handoff protocol](skills/workflow-coordinator/references/protocol.md) uses a stable project ID, task ID, and scope. You can keep a small handoff in the conversation or save JSON for repeatable exchanges. An [optional Python checker](skills/workflow-coordinator/scripts/check_packet.py) checks the structure and can match a result to its context.
 
+## Walk through a mixed task
+
+Suppose a project note sets the dimensions for a cable guide. The coordinator reads the brief and its authoritative source, then hands the asset skill the outer dimensions, channel opening, allowed changes, and the checks the brief calls for. It keeps the same project ID, task ID, and scope across the exchange.
+
+The delivery skill creates the editable source and requested GLB, checks the dimensions and mesh after reimport, then returns the files and observed measurements. The coordinator reports which checks ran and can record an authorized note update. Each phase can happen in the same chat.
+
+## When work stops partway through
+
+If Blender is unavailable, the project brief and context packet are still usable. The result records the missing tool, marks delivery unchecked, and identifies the next action. Resume by confirming the Blender connection and scene, then reuse the same context. The [partial-result example](examples/cable-guide/partial-result.json) shows what that looks like.
+
+For a straightforward question or a one-skill edit, the coordinator can route directly to the appropriate skill or ordinary project files. A small handoff can live in the chat. The optional checker is useful when you need durable JSON or want to match a result to its originating context.
+
 ## Optional companion skills
 
 | Skill | What it contributes |
