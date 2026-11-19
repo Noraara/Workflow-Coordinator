@@ -1,0 +1,26 @@
+{
+  "schema": "atlas-workflow/v1",
+  "project_id": "desk-setup-demo",
+  "task_id": "cable-guide-delivery",
+  "scope": "Create and verify the disposable cable guide files and record a short project note.",
+  "kind": "context",
+  "constraints": [
+    "One editable mesh with an open channel along its depth.",
+    "Aim for 50 × 24 × 15 mm outer dimensions, an 8 mm channel opening, and ground level at 0 mm."
+  ],
+  "decisions": [
+    "Deliver a Blender source and export only the guide to GLB.",
+    "Use a clean scene for the round-trip check."
+  ],
+  "evidence": [
+    {
+      "path": "brief.md",
+      "finding": "Authoritative fixture requirements and scope.",
+      "limits": "Applies to the fictional cable guide only."
+    }
+  ],
+  "unknowns": [],
+  "acceptance": [
+    "Compare dimensions within 0.1 mm, mesh count, and triangle count after reimport."
+  ]
+}

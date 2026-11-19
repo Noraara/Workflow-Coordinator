@@ -1,0 +1,43 @@
+{
+  "schema": "atlas-workflow/v1",
+  "project_id": "desk-setup-demo",
+  "task_id": "cable-guide-delivery",
+  "scope": "Create and verify the disposable cable guide files and record a short project note.",
+  "kind": "result",
+  "changes": [
+    "cable-guide.blend",
+    "cable-guide.glb"
+  ],
+  "decisions": [
+    "Use a single closed profile extrusion with an open-top channel."
+  ],
+  "checks": [
+    {
+      "name": "Source and GLB dimensions",
+      "status": "pass",
+      "evidence": "measurements.json",
+      "observed": "Both measured 50 × 24 × 15 mm with their lowest point at 0 mm."
+    },
+    {
+      "name": "GLB mesh and triangle count",
+      "status": "pass",
+      "evidence": "measurements.json",
+      "observed": "The source and reimport each had one mesh and 28 triangles."
+    },
+    {
+      "name": "Engine runtime",
+      "status": "not-applicable",
+      "observed": "The brief asks for a Blender round trip."
+    },
+    {
+      "name": "Publication and visual acceptance",
+      "status": "not-applicable",
+      "observed": "The fixture scope excludes publication and visual approval."
+    }
+  ],
+  "findings": [
+    "Record the measured Blender round trip in the project note."
+  ],
+  "unresolved": [],
+  "next_action": "Return the result to the knowledge phase so it can update the authorized delivery note."
+}
